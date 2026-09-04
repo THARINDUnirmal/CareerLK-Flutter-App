@@ -1,3 +1,4 @@
+import 'package:career_lk/view/job_detail_screen.dart';
 import 'package:career_lk/view/login/signin_screen.dart';
 import 'package:career_lk/view/main_screens/home_screen.dart';
 import 'package:career_lk/view/onboarding_screens/onbording_screen.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: GoogleFonts.poppins().fontFamily),
-      home: OnbordingScreen(),
+      home: JobDetailScreen(),
     );
   }
 }
