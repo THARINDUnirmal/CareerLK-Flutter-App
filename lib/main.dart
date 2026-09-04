@@ -1,4 +1,6 @@
+import 'package:career_lk/view/login/signin_screen.dart';
 import 'package:career_lk/view/main_screens/home_screen.dart';
+import 'package:career_lk/view/onboarding_screens/onbording_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: GoogleFonts.poppins().fontFamily),
-      home: HomeScreen(),
+      home: OnbordingScreen(),
     );
   }
 }
