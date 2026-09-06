@@ -74,7 +74,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
 
                 Positioned(
-                  top: -12,
+                  top: -14,
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
@@ -82,8 +82,8 @@ class _MainScreenState extends State<MainScreen> {
                       });
                     },
                     child: Container(
-                      width: 48,
-                      height: 48,
+                      width: 52,
+                      height: 52,
                       decoration: BoxDecoration(
                         color: Color(0xff1478c6),
                         shape: BoxShape.circle,
@@ -99,7 +99,7 @@ class _MainScreenState extends State<MainScreen> {
                       child: const Icon(
                         Icons.add,
                         color: Colors.white,
-                        size: 23,
+                        size: 28,
                       ),
                     ),
                   ),
@@ -112,9 +112,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  // =========================
-  // NAV ITEM
-  // =========================
   Widget _navItem({required IconData icon, required int index}) {
     final bool isSelected = selectedIndex == index;
 
@@ -132,9 +129,9 @@ class _MainScreenState extends State<MainScreen> {
           children: [
             Icon(
               icon,
-              size: 25,
+              size: 28,
               color: isSelected
-                  ? const Color(0xFF32966F)
+                  ? const Color(0xff1478c6)
                   : Colors.grey.shade400,
             ),
 

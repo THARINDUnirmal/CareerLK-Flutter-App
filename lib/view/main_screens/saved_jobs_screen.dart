@@ -61,10 +61,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // ============================================
-            // HEADER
-            // ============================================
-
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
               child: Row(
@@ -134,9 +130,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
               ),
             ),
 
-            // ============================================
-            // SAVED COUNT
-            // ============================================
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 12, 20, 15),
               child: Row(
@@ -169,9 +162,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
               ),
             ),
 
-            // ============================================
-            // JOB LIST
-            // ============================================
             Expanded(
               child: savedJobs.isEmpty
                   ? _emptyState()
