@@ -1,3 +1,8 @@
+import 'package:career_lk/view/main_screens/add_job_screen.dart';
+import 'package:career_lk/view/main_screens/home_screen.dart';
+import 'package:career_lk/view/main_screens/profile_screen.dart';
+import 'package:career_lk/view/main_screens/saved_jobs_screen.dart';
+import 'package:career_lk/view/main_screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -9,17 +14,26 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int selectedIndex = 0;
+  List<Widget> screens = [
+    HomeScreen(),
+    SearchScreen(),
+    AddJobScreen(),
+    SavedJobsScreen(),
+    ProfileScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(100),
-        ),
-        child: Center(child: Icon(Icons.add)),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadiusGeometry.circular(100),
+      //   ),
+      //   child: Center(child: Icon(Icons.add)),
+      // ),
+
+      body: screens[selectedIndex],
 
       bottomNavigationBar: SafeArea(
         child: Padding(
@@ -52,9 +66,9 @@ class _MainScreenState extends State<MainScreen> {
 
                       const SizedBox(width: 55),
 
-                      _navItem(icon: Icons.bookmark_border, index: 2),
+                      _navItem(icon: Icons.bookmark_border, index: 3),
 
-                      _navItem(icon: Icons.person, index: 3),
+                      _navItem(icon: Icons.person, index: 4),
                     ],
                   ),
                 ),
@@ -64,7 +78,7 @@ class _MainScreenState extends State<MainScreen> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        selectedIndex = 4;
+                        selectedIndex = 2;
                       });
                     },
                     child: Container(
