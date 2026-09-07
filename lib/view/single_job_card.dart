@@ -13,6 +13,7 @@ class _SingleJobCardState extends State<SingleJobCard> {
     return Container(
       width: double.infinity,
       height: 100,
+      margin: EdgeInsets.only(bottom: 10),
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
@@ -20,7 +21,19 @@ class _SingleJobCardState extends State<SingleJobCard> {
       ),
       child: Row(
         children: [
-          CircleAvatar(radius: 30),
+          Container(
+            width: 50,
+            height: 50,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                  "https://logowik.com/content/uploads/images/sri-lanka-government8434.logowik.com.webp",
+                ),
+              ),
+            ),
+          ),
           SizedBox(width: 10),
           SizedBox(
             width: 250,

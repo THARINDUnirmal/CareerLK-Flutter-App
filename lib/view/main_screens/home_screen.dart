@@ -1,3 +1,4 @@
+import 'package:career_lk/view/job_detail_screen.dart';
 import 'package:career_lk/view/single_job_card.dart';
 import 'package:career_lk/widgets/promoted_jobs_widget.dart';
 import 'package:flutter/material.dart';
@@ -139,8 +140,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                SizedBox(),
-                SingleJobCard(),
+                SizedBox(height: 20),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => JobDetailScreen(),
+                      ),
+                    );
+                  },
+                  child: SingleJobCard(),
+                ),
                 SingleJobCard(),
                 SingleJobCard(),
                 SingleJobCard(),
