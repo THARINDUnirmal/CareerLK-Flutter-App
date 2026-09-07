@@ -65,28 +65,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
               child: Row(
                 children: [
-                  // Back button
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      width: 44,
-                      height: 44,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_back_ios_new,
-                        size: 18,
-                        color: Color(0xFF263238),
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 15),
-
                   // Title
                   const Expanded(
                     child: Column(
@@ -211,10 +189,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
     );
   }
 
-  // ======================================================
-  // SAVED JOB CARD
-  // ======================================================
-
   Widget _savedJobCard({
     required Map<String, dynamic> job,
     required VoidCallback onRemove,
@@ -239,10 +213,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
 
       child: Row(
         children: [
-          // ============================================
-          // COMPANY LOGO
-          // ============================================
-
           Container(
             width: 56,
             height: 56,
@@ -258,9 +228,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
 
           const SizedBox(width: 13),
 
-          // ============================================
-          // JOB DETAILS
-          // ============================================
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -338,9 +305,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
 
           const SizedBox(width: 8),
 
-          // ============================================
-          // RIGHT SIDE
-          // ============================================
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -379,10 +343,6 @@ class _SavedJobsScreenState extends State<SavedJobsScreen> {
       ),
     );
   }
-
-  // ======================================================
-  // EMPTY STATE
-  // ======================================================
 
   Widget _emptyState() {
     return Center(
