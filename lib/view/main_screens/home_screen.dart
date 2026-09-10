@@ -41,7 +41,36 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Spacer(),
-                    CircleAvatar(),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 12,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFFFFD700), Color(0xFFFF8C00)],
+                        ),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.workspace_premium,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                          SizedBox(width: 8),
+                          Text(
+                            'Go Pro',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(height: 20),

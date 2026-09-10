@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
         scaffoldBackgroundColor: Color(0xffeff0f3),
       ),
-      home: MainScreen(),
+      home: OnbordingScreen(),
     );
   }
 }

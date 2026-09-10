@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class JobDetailScreen extends StatelessWidget {
@@ -19,7 +20,6 @@ class JobDetailScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF4F6FA),
 
-      // BOTTOM APPLY BUTTON
       bottomNavigationBar: Container(
         padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
         decoration: const BoxDecoration(color: Colors.white),
@@ -99,6 +99,14 @@ class JobDetailScreen extends StatelessWidget {
                       size: 21,
                     ),
                   ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    SharePlus.instance.share(
+                      ShareParams(text: 'Download my app: https://example.com'),
+                    );
+                  },
+                  child: const Text('Share App'),
                 ),
               ],
             ),
